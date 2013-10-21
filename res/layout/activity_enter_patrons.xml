@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EnterPatronsActivity" >
+
+    <Button
+        android:id="@+id/button_saveAndNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/food"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="21dp"
+        android:onClick="insertIntoDb"
+        android:text="@string/button_save" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_saveAndNext"
+        android:layout_alignBottom="@+id/button_saveAndNext"
+        android:layout_alignRight="@+id/food"
+        android:onClick="clear"
+        android:text="@string/button_clear" />
+
+    <EditText
+        android:id="@+id/tableNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="@string/table_No"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/patronNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableNo"
+        android:layout_below="@+id/tableNo"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/patron_No"
+        android:inputType="number" />
+
+    <Spinner
+        android:id="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/patronNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:entries="@array/food_array"
+        android:prompt="@string/food_prompt" />
+
+</RelativeLayout>
